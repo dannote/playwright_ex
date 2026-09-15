@@ -6,10 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 <!-- and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html). -->
 
 ## [Unreleased]
-### Fixed
-- Download waiters validate their own options, excluding raw event transforms and
-  subscription overrides to preserve the `Download` result.
 
+## [0.11.0] 2026-09-15
 ### Added
 - `Frame.snapshot/2` for an atomic read of the cached URL, document request, and
   client-generated document identity.
@@ -27,6 +25,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
   results stay synchronous, and URL predicate errors affect only that caller.
 
 ### Fixed
+- Download waiters validate their own options, excluding raw event transforms and
+  subscription overrides to preserve the `Download` result.
 - Clean up abandoned frame waits when callers exit and discard recorded frame
   state when the connection closes.
 
